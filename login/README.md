@@ -1,16 +1,24 @@
-# login
 
-A new Flutter project.
+ Step1: Go to -> android/app/src/main/kotlin/MainActivity.kt
 
-## Getting Started
+<!-- ------------------change------------------ -->
 
-This project is a starting point for a Flutter application.
+import io.flutter.embedding.android.FlutterActivity
 
-A few resources to get you started if this is your first Flutter project:
+class MainActivity: FlutterActivity()
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<!-- ------------------To----------------------- -->
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+import io.flutter.embedding.android.FlutterFragmentActivity
+
+class MainActivity: FlutterFragmentActivity()
+
+
+ Step2: Add Permission in  android/app/src/main/AndroidManifest.xml
+ <!-- inside <manifest> -->
+<manifest -->
+<!-- this is permission -->
+  <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+</manifest>
+
+ Step 3: add local_auth package on pubspec.yaml
